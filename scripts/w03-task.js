@@ -66,26 +66,26 @@ if (document.getElementById("member").checked) {
     subtotal = subtotal * .8;
 } 
 // Output
-document.getElementById("total").textContent = subtotal.toFixed(2);
+document.getElementById("total").innerHTML = subtotal.toFixed(2);
 }
 document.getElementById("getTotal").addEventListener("click", getTotal);
    
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
 let numbersArray =[1,2,3,4,5,6,7,8,9,10,11,12,13]
-document.getElementById("array").textContent = numbersArray;
+document.getElementById("array").innerHTML = numbersArray;
 /* Output Odds Only Array */
 document.querySelector('#odds').innerHTML = numbersArray.filter(number => number % 2 === 1);
 /* Output Evens Only Array */
 document.querySelector('#evens').innerHTML = numbersArray.filter(number => number % 2 === 0);
 /* Output Sum of Org. Array */
 const sumOfArray = numbersArray.reduce((acc, num) => acc + num, 0);
-document.getElementById('sumOfArray').textContent = `Sum of Array: ${sumOfArray}`;
+document.getElementById('sumOfArray').innerHTML = `Sum of Array: ${sumOfArray}`;
 //numbersArray.reduce((sum, number) => sum + number);
 //numbersArray.map(sumOfArray => sumOfArray * 2)
 /* Output Multiplied by 2 Array */
 const multipliedArray = numbersArray.map(num => num * 2);
-document.getElementById('multiplied').textContent = multipliedArray;
+document.getElementById('multiplied').innerHTML = multipliedArray;
 /* Output Sum of Multiplied by 2 Array */
 const sumOfMultiplied = multipliedArray.reduce((acc, num) => acc + num, 0);
-document.getElementById('sumOfMultiplied').textContent = `Sum of Multiplied: ${sumOfMultiplied}`;
+document.getElementById('sumOfMultiplied').innerHTML = `Sum of Multiplied: ${sumOfMultiplied}`;
