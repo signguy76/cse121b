@@ -89,3 +89,4 @@ document.getElementById('multiplied').innerHTML = multipliedArray;
 /* Output Sum of Multiplied by 2 Array */
 const sumOfMultiplied = multipliedArray.reduce((acc, num) => acc + num, 0);
 document.getElementById('sumOfMultiplied').innerHTML = `Sum of Multiplied: ${sumOfMultiplied}`;
+
