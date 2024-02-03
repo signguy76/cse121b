@@ -9,9 +9,9 @@ let myProfile = {
         alt: "Coates Family Pic"
     },
     favoriteFoods: [
-        'Burrito',
+        'Burritos',
         'Stroganoff',
-        'Hamburger',
+        'Hamburgers',
         'Ice Cream',
     ],
     hobbies: [
@@ -29,10 +29,26 @@ let myProfile = {
 
 myProfile.placesLived.push(
     {
-        place: 'San Jose, CA', 
+        place: 'San Jose, CA',
         length: '20 years',
-        place: 'Los Angeles CA',
-        length: '10 years' 
+    }
+);
+myProfile.placesLived.push(
+    {
+        place: 'Los Angeles, CA',
+        length: '10 years',
+    }
+);
+myProfile.placesLived.push(
+    {
+        place: 'Portland, OR',
+        length: '19 years',
+    }
+);
+myProfile.placesLived.push(
+    {
+        place: 'Camas, WA',
+        length: '14 years',
     }
 );
 
@@ -46,11 +62,30 @@ photo.src = myProfile.photo.src;
 photo.alt = myProfile.photo.alt;
 
 /* Favorite Foods List*/
-
+myProfile.favoriteFoods.forEach(food => {
+    let li = document.createElement("li");
+    li.textContent = food;
+    document.querySelector("#favorite-foods").appendChild(li);
+})
 
 /* Hobbies List */
-
-
+myProfile.hobbies.forEach(hobby => {
+    let li = document.createElement("li");
+    li.textContent = hobby;
+    document.querySelector("#hobbies").appendChild(li);
+})
 /* Places Lived DataList */
+let placesLivedList = document.getElementById("places-lived");
+myProfile.placesLived.forEach(place => {
+    let dtElement = document.createElement("dt");
+    let ddElement = document.createElement("dd");
+
+    dtElement.textContent = place.place;
+    ddElement.textContent = place.length;
+
+    placesLivedList.appendChild(dtElement);
+    placesLivedList.appendChild(ddElement);
+    document.querySelector("#places-lived")
+});
 
 
