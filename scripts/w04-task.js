@@ -5,7 +5,7 @@ let photo = document.querySelector('#photo');
 let myProfile = {
     name: "Neal Coates",
     photo: {
-        src: "images/coatesFam.png",
+        src: "images/CoatesFam.png",
         alt: "Coates Family Pic"
     },
     favoriteFoods: [
