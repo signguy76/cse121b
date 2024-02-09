@@ -30,15 +30,14 @@ const displayTemples = (temples) => {
 
 const getTemples = async () => {
     try {
-        // Fetch temple data from the API
+        
         const response = await fetch(apiUrl);
         const data = await response.json();
         templeList = data;
         displayTemples(templeList);
     } catch (error) {
         console.error('Error fetching temple data:', error);
-        // If an error occurs, return an empty array
-        //return [];
+        
     }
 };
 
